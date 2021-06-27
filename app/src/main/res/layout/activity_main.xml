@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:paddingBottom="@dimen/activity_vertical_margin"
+	android:paddingLeft="@dimen/activity_horizontal_margin"
+	android:paddingRight="@dimen/activity_horizontal_margin"
+	android:paddingTop="@dimen/activity_vertical_margin"
+	tools:context="com.example.fcm.MainActivity">
+
+	<ImageView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_above="@+id/zoneCenter"
+		android:layout_centerHorizontal="true"
+		android:layout_margin="@dimen/activity_horizontal_margin"
+		android:contentDescription="@string/app_name"
+		android:src="@mipmap/fcm"/>
+
+	<LinearLayout
+		android:id="@+id/zoneCenter"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_centerInParent="true"
+		android:orientation="vertical">
+
+		<Button
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:onClick="showToken"
+			android:text="@string/btn_show_token"/>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:paddingBottom="@dimen/activity_vertical_margin"
+			android:paddingTop="@dimen/activity_vertical_margin">
+
+			<Button
+				style="@style/CustomButton"
+				android:text="@string/btn_subscribe_news"
+				android:onClick="subscribe"/>
+
+			<Button
+				style="@style/CustomButton"
+				android:text="@string/btn_unsubscribe_news"
+				android:onClick="unsubscribe"/>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+
+			<Button
+				style="@style/CustomButton"
+				android:text="@string/btn_send_token"
+				android:onClick="sendToken"/>
+
+			<Button
+				style="@style/CustomButton"
+				android:text="@string/btn_send_tokens"
+				android:onClick="sendTokens"/>
+
+			<Button
+				style="@style/CustomButton"
+				android:text="@string/btn_send_topic"
+				android:onClick="sendTopic"/>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+	<TextView
+		android:id="@+id/txt"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/zoneCenter"
+		android:paddingBottom="@dimen/activity_vertical_margin"
+		android:paddingTop="@dimen/activity_vertical_margin"
+		android:gravity="center"
+		android:textIsSelectable="true"
+		android:text="@string/result"/>
+
+</RelativeLayout>
